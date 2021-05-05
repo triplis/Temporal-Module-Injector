@@ -1,1 +1,132 @@
 
+<?xml version="1.0" encoding="utf-8"?>
+<I c="TemporalModuleInjector" i="snippet" m="temporal_module_injector.snippet_tuning_class" n="Triplis:TemporalModuleInjector_GeneralFactoryVariantTesting" s="16755006684738404148">
+  <L n="add_items_to_list">
+    <U>
+      <V n="new_items" t="pregnancy_origin_modifiers">
+        <U n="pregnancy_origin_modifiers">
+          <L n="item_list">
+            <U>
+              <E n="key">MERFOLK</E>
+              <U n="value">
+                <L n="trait_entries">
+                  <U>
+                    <L n="traits">
+                      <U>
+                        <T n="trait">10857819286507070369<!--Trait: Triplis_Sorcerer_Trait--></T>
+                      </U>
+                    </L>
+                  </U>
+                </L>
+              </U>
+            </U>
+            <U>
+              <E n="key">MONEY_PILE</E>
+              <U n="value">
+                <L n="trait_entries">
+                  <U>
+                    <L n="traits">
+                      <U>
+                        <T n="trait">26392<!--Trait: trait_NeverWeary--></T>
+                      </U>
+                    </L>
+                  </U>
+                </L>
+              </U>
+            </U>
+          </L>
+        </U>
+      </V>
+    </U>
+    <U>
+      <V n="new_items" t="club_traits">
+        <U n="club_traits">
+          <L n="item_list">
+            <T>10857819286507070369<!--Trait: Triplis_Sorcerer_Trait--></T>
+          </L>
+        </U>
+      </V>
+    </U>
+    <U>
+      <V n="new_items" t="lifestyles">
+        <U n="lifestyles">
+          <L n="item_list">
+            <T>248133<!--Trait: trait_Lifestyles_Sedentary--></T>
+          </L>
+        </U>
+      </V>
+    </U>
+    <U>
+      <V n="new_items" t="buff_loot_on_instance">
+        <U n="buff_loot_on_instance">
+          <L n="target_tuning_list">
+            <T>239811<!--Buff: buff_Knitting_Visible_ItchyKnits--></T>
+          </L>
+          <L n="item_list">
+            <T>106746<!--Trait: loot_JobPerformance_Loss_Medium_Business--></T>
+          </L>
+        </U>
+      </V>
+    </U>
+    <U>
+      <V n="new_items" t="trait_loot_on_trait_add">
+        <U n="trait_loot_on_trait_add">
+          <L n="target_tuning_list">
+            <T>16845<!--Trait: trait_HotHeaded--></T>
+          </L>
+          <L n="item_list">
+            <T>168038<!--LootActions: loot_Statistic_LifeSkill_EmotionalControl_Trait_GainSmall--></T>
+            <T>201221<!--LootActions: loot_Reputation_NPC_Trait_Bad_HatesChildren--></T>
+          </L>
+        </U>
+      </V>
+    </U>
+    <U>
+      <V n="new_items" t="trait_buff_replacements">
+        <U n="trait_buff_replacements">
+          <L n="target_tuning_list">
+            <T>16845<!--Trait: trait_HotHeaded--></T>
+          </L>
+          <L n="item_list">
+            <U>
+              <T n="key">12428<!--Buff: Buff_Environment_Negative_BadSurroundings--></T>
+              <U n="value">
+                <T n="buff_type">12430<!--Buff: Buff_Environment_Negative_WretchedSurroundings--></T>
+              </U>
+            </U>
+            <U>
+              <T n="key">12429<!--Buff: Buff_Environment_Negative_UnpleasantSurroundings--></T>
+              <U n="value">
+                <T n="buff_type">12430<!--Buff: Buff_Environment_Negative_WretchedSurroundings--></T>
+              </U>
+            </U>
+          </L>
+        </U>
+      </V>
+    </U>
+  </L>
+  <L n="add_items_to_existing_list_item">
+    <U>
+      <V n="new_items" t="baby_default_bassinets">
+        <U n="baby_default_bassinets">
+          <L n="item_list">
+            <T>151815</T>
+            <T>151816</T>
+          </L>
+          <T n="key_ref">102922<!--Trait: trait_isBornFromAlienAbduction--></T>
+        </U>
+      </V>
+    </U>
+    <U>
+      <V n="new_items" t="away_actions">
+        <U n="away_actions">
+          <L n="item_list">
+            <T>75176<!--AwayAction: AwayAction_TestSkillUp_Cooking--></T>
+            <T>76149<!--AwayAction: AwayAction_BuildSkill_Bartending--></T>
+          </L>
+          <T n="key_ref">76143<!--ApplyAwayActionInteraction: ApplyAwayAction_BuildSkill--></T>
+        </U>
+      </V>
+    </U>
+  </L>
+</I>

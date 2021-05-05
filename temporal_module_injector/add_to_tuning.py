@@ -1,4 +1,3 @@
-
 import sims4.log
 from sims4.collections import FrozenAttributeDict
 from _sims4_collections import frozendict

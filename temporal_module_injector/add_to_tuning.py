@@ -29,7 +29,9 @@ def add_items_to_list(new_items):
         injection_target_module_str = injection_target_list[0]
         injection_target_class_str = injection_target_list[1]
         injection_target_attr_str = injection_target_list[2]
-        
+
+        # We use sys.modules to get a reference to the given module
+        # as it exists / has been loaded in the game.
         injection_target_class = getattr(
             sys.modules[injection_target_module_str], 
             injection_target_class_str
@@ -43,7 +45,12 @@ def add_items_to_list(new_items):
                 injection_target_attr_str
             )
         )
-        
+
+        # We want to use setattr to ensure that we are applying changes
+        # to the reference of the module, not a copy of it. Modules are weird
+        # and don't have dedicated tuning IDs you can call on to modify them.
+        # This is why module injection usually involves importing the module and changing it directly,
+        # but we can't depend on that as we're trying to be more generic in design.
         if injected_result is not None:
             setattr(
                 injection_target_class, 
@@ -51,6 +58,7 @@ def add_items_to_list(new_items):
                 injected_result
             )
     elif injection_target_type == InjectionTargetType.TUNING_REF_ATTR:
+        # This is more standard tuning injection, despite looking very vague.
         target_tuning_list = new_items.target_tuning_list
         item_list = new_items.item_list
         injection_target_attr_str = new_items.injection_target_attr_str
@@ -153,6 +161,7 @@ def add_items_to_existing_list_item(items, key_ref, key_str, value_str, injectio
 def modify_list_item_by_type(new_items, injection_target_str, injection_target_ref, key_ref, key_str, value_str):
     component_type = type(injection_target_ref)
     if component_type == tuple:
+        # Do type deduction voodoo to determine if it's a tuple of ImmutableSlots
         if isinstance(injection_target_ref[0], _ImmutableSlotsBase):
             for existing_item in injection_target_ref:
                 if key_ref in getattr(existing_item, key_str):

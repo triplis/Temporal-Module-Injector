@@ -54,7 +54,7 @@ class FactoryVariantBase(HasTunableSingletonFactory, AutoFactoryInit):
                         'boilerplate. This is mainly to make it clearer at a glance which variants should be '
                         'supported in snippet tuning. That I think this makes sense to implement is probably '
                         'a sign of poor design, but that is for future me to get mad about when he later wonders '
-                        'what I was thinking.',
+                        'what I was thinking. [Addendum: Its true, idk what I was thinking.]',
             tunable_type=bool, 
             default=False
         )
